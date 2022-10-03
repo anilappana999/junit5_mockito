@@ -2,6 +2,10 @@ package com.lovetolearn.SpringbootApp.exception;
 
 public class CustomExceptionForGetById  extends RuntimeException{
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1817896252785198981L;
 	private String message;
 	private String description;
 	public String getMessage() {

@@ -7,4 +7,6 @@ public interface EmployeeDao {
 	public Employee saveOrUpdate(Employee emp);
 	
 	public boolean delete(Integer id);
+	
+	public boolean checkEmployee(Integer id);
 }

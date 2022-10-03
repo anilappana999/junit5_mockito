@@ -25,8 +25,27 @@ public class EmployeeServiceImpl implements EmployeeService {
 		return empDao.delete(id);
 	}
 
-	public static boolean checkIt() {
+	@Override
+	public void checkEmployee(Integer id) {
 
-		return true;
+		boolean flag = empDao.delete(id);
+		if (flag) {
+
+			System.out.println("employee id exists");
+		} else {
+
+			System.out.println("employee id nota exists");
+		}
+
 	}
+
+	@Override
+	public boolean checkExistingEmployee(Integer id) {
+
+		return empDao.checkEmployee(id);
+	}
+	
+	
+
+
 }

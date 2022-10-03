@@ -20,7 +20,7 @@ public class EmployeeDaoImpl implements EmployeeDao {
 	public Employee saveOrUpdate(Employee emp) {
 
 		List<Employee> list = (List<Employee>) empRepo.findAll();
-		System.out.println(list.size() + "anil");
+		System.out.println(list.size() + "list-size");
 
 		return empRepo.save(emp);
 	}
@@ -36,6 +36,12 @@ public class EmployeeDaoImpl implements EmployeeDao {
 			throw new CustomExceptionForGetById("employee not found", "exception occurred");
 		}
 		return check;
+	}
+
+	@Override
+	public boolean checkEmployee(Integer id) {
+		 
+		return empRepo.existsById(id);
 	}
 
 }
