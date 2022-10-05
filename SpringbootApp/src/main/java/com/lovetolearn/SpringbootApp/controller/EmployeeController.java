@@ -45,7 +45,7 @@ public class EmployeeController {
 		}
 	}
 
-	@GetMapping("/verify")
+	@GetMapping("/verifyId")
 	@ExceptionHandler(CustomExceptionForGetById.class)
 	public boolean verifyId(Integer id) throws Exception {
 
